@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 2021_10_30_184533) do
   create_table "categories_products", id: false, force: :cascade do |t|
     t.bigint "category_id", null: false
     t.bigint "product_id", null: false
+    t.index ["category_id"], name: "index_categories_products_on_category_id"
+    t.index ["product_id"], name: "index_categories_products_on_product_id"
   end
 
   create_table "products", force: :cascade do |t|
