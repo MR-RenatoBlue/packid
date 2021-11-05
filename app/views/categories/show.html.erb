@@ -1,9 +1,15 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Name:</strong>
   <%= @category.name %>
 </p>
+<div class="container">
+  <% @products.each do |product| %>
+    <%= product.name %>
+    <%= product.description %>
+    <%= product.price %>
 
+
+  <% end  %>
+</div>
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>
