@@ -37,6 +37,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Gem boostrap for styling pages
 gem 'bootstrap', '~> 5.1.0'
 gem 'jquery-rails', '~> 4.4'
+# simplifying forms
+gem 'simple_form', '~> 5.1'
 # Gem devise for authentication
 gem 'devise', '~> 4.8'
 # Gem rolify to differentiate users' roles
