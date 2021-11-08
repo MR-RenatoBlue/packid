@@ -45,6 +45,8 @@ gem 'devise', '~> 4.8'
 gem 'rolify', '~> 6.0'
 # Gem cancancan for authorization
 gem 'cancancan', '~> 3.3'
+#Gem toastr for notifications
+gem 'toastr-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
