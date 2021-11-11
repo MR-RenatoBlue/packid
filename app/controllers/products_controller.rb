@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
+  load_and_authorize_resource
   before_action :set_product, only: %i[ show edit update destroy ]
 
   # GET /products or /products.json

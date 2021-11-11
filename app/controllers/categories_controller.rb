@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+  load_and_authorize_resource
+  skip_authorize_resource only: [:index, :show]
   before_action :set_category, only: %i[ show edit update destroy ]
 
   # GET /categories or /categories.json
