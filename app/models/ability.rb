@@ -4,11 +4,16 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    if user.has_role? :admin
+
+    can :read, Product
+    return unless user.present?
+    return unless user.has_role? :operator
+    can :manage, Product
+    can :read, Category   
+    return unless user.has_role? :admin
       can :manage, :all
-    else
-      can :read, :all
-    end
+    
+   
     
     # The first argument to `can` is the action you are giving the user
     # permission to do.
