@@ -9,7 +9,7 @@
         <li class="nav-item">
           <%= link_to "Home", root_path, class: "nav-link" %>
         </li>
-        <% if can? :edit, Category %>
+        <% if can? :read, Category %>
           <li class="nav-item">
             <%= link_to "Categories", categories_path , class: "nav-link" %>
           </li>     
