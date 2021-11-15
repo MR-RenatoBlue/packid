@@ -8,7 +8,8 @@ class User < ApplicationRecord
   def assign_default_role
     self.add_role(:operator) if self.roles.blank?
   end
-
+  has_many :notifications, as: :recipient
+  
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 end

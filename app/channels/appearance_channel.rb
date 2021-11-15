@@ -1,3 +1,4 @@
+=begin
 class AppearanceChannel < ApplicationCable::Channel
   def subscribed
     current_user.appear
@@ -15,3 +16,4 @@ class AppearanceChannel < ApplicationCable::Channel
     current_user.away
   end
 end
+=end
