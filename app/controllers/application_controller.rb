@@ -11,6 +11,6 @@ class ApplicationController < ActionController::Base
   end
 
   def set_last_seen_at
-    current_user.touch(:last_seem_at)
+    current_user.touch(:last_seen_at)
   end
 end
