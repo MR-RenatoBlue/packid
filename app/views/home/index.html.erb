@@ -13,3 +13,7 @@
 
 <div id="notifications">
 </div>
+<h2>Online Users:</h2>
+<ul id="online-users">
+  <%= render partial: "users/online", collection: User.online, as: :user %>
+</ul>
