@@ -11,7 +11,7 @@ class User < ApplicationRecord
   has_many :notifications, as: :recipient
   
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable, :confirmable
 
   #scope :online, ->{ where("last_seen_at > ?", 15.minutes.ago) }
 
